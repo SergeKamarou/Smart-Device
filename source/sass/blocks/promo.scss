@@ -1,0 +1,140 @@
+.promo {
+  min-height: 880px;
+  margin-top: -120px;
+  background: $black-pearl-to-bottom;
+  background-image: url("../img/promo-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+
+  @include retina {
+    background-image: url("../img/promo-bg@2x.png");
+  }
+
+  @include vp-1023 {
+    min-height: 640px;
+    margin-top: -100px;
+    background-position: 20% 0;
+  }
+
+  @include vp-767 {
+    min-height: 560px;
+    margin-top: -70px;
+    background-position: 25% 0;
+  }
+}
+
+.promo__wrap {
+  width: 1024px;
+  padding: 305px 28px 10px;
+
+  @include vp-1023 {
+    width: 670px;
+    padding: 180px 0 10px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 150px;
+  }
+}
+
+.promo__title {
+  @include font($ff-roboto, 700, 80px, 94px);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $color-alice-blue;
+  margin: 0 0 31px;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 8px;
+  }
+}
+
+.promo__description {
+  @include font($ff-ptmono, 400, 22px, 34px);
+  color: $color-alice-blue;
+  margin: 0 0 47px;
+
+  @include vp-1023 {
+    margin: 0 0 57px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 44px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.promo__link {
+  @include font($ff-roboto, 700, 18px, 21px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-alice-blue;
+  display: inline-block;
+  vertical-align: middle;
+  width: 410px;
+  padding: 17px 5px;
+  text-align: center;
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px;
+  user-select: none;
+
+  @include vp-1023 {
+    margin-left: 45px;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  @include hover {
+    background-color: darken($color-deep-sky-blue, 10%);
+  }
+
+  @include focus {
+    outline-color: $color-whisper;
+  }
+
+  @include active {
+    background-color: darken($color-deep-sky-blue, 20%);
+  }
+
+
+  @include vp-767 {
+    margin: 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 5px;
+  }
+}
+
+.promo__link-text {
+  &--mobile {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}

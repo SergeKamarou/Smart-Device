@@ -12,6 +12,11 @@ let modals;
 // closeCallback() {
 //   openModalInCloseCallback('modal-5');
 // },
+// const focusedInput = document.querySelector('[data-focus]');
+
+// setTimeout(() => {
+//   focusedInput.querySelector('[data-focus]').focus();
+// }, 100);
 
 const settings = {
   'default': {
@@ -33,6 +38,7 @@ const initModals = () => {
       el.classList.remove('modal--preload');
     }, 100);
   });
+
   modals = new Modals(settings);
   // Используйте в разработке экспортируемую переменную modals, window сделан для бэкэнда
   window.modals = modals;

@@ -1,0 +1,278 @@
+.feedback {
+  background-color: $color-contacts-deep-sky-blue;
+  position: relative;
+  min-height: 840px;
+
+  &::before {
+    content: "";
+    width: 50.6%;
+    height: 100%;
+    background-color: $color-contacts-black-pearl;
+    position: absolute;
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+  }
+
+  @include vp-1023 {
+    min-height: 580px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    min-height: 749px;
+  }
+}
+
+.feedback__block-wrap {
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 166px;
+  padding-bottom: 50px;
+
+  &::before {
+    content: "";
+    width: 84%;
+    height: 285px;
+    background-image: url("../img/airplane.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 52%;
+    transform: translateY(-50%);
+  }
+
+  @include retina {
+    &::before {
+      background-image: url("../../img/airplane@2x.png");
+    }
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    padding-top: 46px;
+    padding-bottom: 40px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 20px;
+  }
+}
+
+.feedback__form-wrap {
+  grid-column: 2/3;
+  padding: 0 10px 0 19px;
+
+  @include vp-1023 {
+    grid-column: 1/-1;
+    padding: 0;
+  }
+}
+
+.feedback__title {
+  @include font($ff-roboto, 400, 36px, 51px);
+  color: $color-default-white;
+  margin: 0 0 12px;
+
+  @include vp-1023 {
+    margin: 0 0 6px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.feedback__subtitle {
+  @include font($ff-ptmono, 400, 16px, 22px);
+  color: $color-default-white;
+  margin: 0 0 34px;
+
+  @include vp-1023 {
+    margin: 0 0 26px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 0 35px;
+  }
+}
+
+.feedback__form-wrap form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 20px;
+  align-items: baseline;
+
+  @include vp-1023 {
+    align-items: center;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback__form-wrap input:not([type="checkbox"]) {
+  @include font($ff-ptmono, 400, 16px, 22px);
+  color: $color-default-white;
+  background-color: $color-btn-black-pearl-opacity;
+  border: none;
+  border-radius: 3px;
+  height: 50px;
+  padding: 0 15px;
+
+  &::placeholder {
+    @include font($ff-ptmono, 400, 16px, 22px);
+    color: $color-transparent;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-whisper;
+  }
+}
+
+.feedback__form-wrap textarea {
+  @include font($ff-ptmono, 400, 16px, 22px);
+  color: $color-default-white;
+  background-color: $color-btn-black-pearl-opacity;
+  border: none;
+  border-radius: 3px;
+  height: 155px;
+  grid-column: 1/-1;
+  padding: 23px 16px;
+  margin-bottom: 14px;
+
+  &::placeholder {
+    @include font($ff-ptmono, 400, 16px, 22px);
+    color: $color-transparent;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-whisper;
+  }
+
+  @include vp-1023 {
+    padding: 30px 15px 10px;
+  }
+
+  @include vp-767 {
+    padding: 23px 15px 10px;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+}
+
+.feedback__form-wrap button {
+  @include font($ff-roboto, 700, 16px, 19px);
+  color: $color-default-white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: $color-btn-black-pearl;
+  border-radius: 3px;
+  width: 97%;
+  height: min-content;
+  padding: 15px 10px 12px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+
+  @include vp-1023 {
+    width: 83%;
+    padding: 17px 10px 9px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 15px 10px 11px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
+
+.feedback__form-wrap span {
+  @include font($ff-ptmono, 400, 14px, 16px);
+  color: $color-default-white;
+  opacity: 0.8;
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    position: absolute;
+    left: -26px;
+    top: 6px;
+  }
+
+  @include vp-1023 {
+    padding: 8px 0 0;
+
+    &::before {
+      left: -25px;
+      top: 35%;
+    }
+  }
+
+  @include vp-767 {
+    padding: 5px 0 0;
+
+    &::before {
+      left: -26px;
+      top: 30%;
+    }
+  }
+}
+
+.feedback__form-wrap input[type="checkbox"]:checked + span::before {
+  background-image: url("../img/svg/checkbox-tick.svg");
+  background-size: 9px 6px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.feedback__form-wrap input[type="checkbox"]:focus-visible ~ span::before {
+  border-color: $color-default-black;
+}
+
+.feedback__form-wrap label {
+  padding-left: 37px;
+
+  @include vp-1023 {
+    padding-left: 25px;
+  }
+
+  @include vp-767 {
+    padding-left: 31px;
+  }
+}
+
+.feedback__form-wrap input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}

@@ -5,23 +5,18 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
   background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-
   transition: opacity $trans-modal,
     transform $trans-modal,
     visibility $trans-modal;
-
   pointer-events: none;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -29,91 +24,216 @@
     display: none;
   }
 
-  &__wrapper {
-    position: relative;
-
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    cursor: pointer;
-  }
-
-  &__content {
-    position: relative;
-
-    width: 600px;
-    padding: 40px;
-
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
-  }
-
-  &__close-btn {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
-
-    width: 40px;
-    height: 40px;
-    padding: 0;
-
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  &--responsive {
-    .modal__content {
-      width: 100%;
-    }
-  }
-
-  &--fit-content {
-    .modal__content {
-      width: auto;
-
-      @include vp-767 {
-        width: 100%;
-      }
-    }
-  }
-
-  &--no-scale {
-    transform: none;
-  }
-
   &--preload {
     transition: none;
   }
+}
 
-  &.is-active {
-    transform: scale(1);
-    visibility: visible;
-    opacity: 1;
+.modal__wrapper {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 60px 40px;
+}
 
-    pointer-events: auto;
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  width: 500px;
+  padding: 35px 40px 45px;
+  background-color: $color-contacts-deep-sky-blue;
+
+  @include vp-767 {
+    width: 100%;
+    padding: 20px;
   }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 7px;
+    width: 28px;
+    height: 1px;
+    background-color: $color-default-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__title {
+  @include font($ff-roboto, 400, 30px, 42px);
+  color: $color-default-white;
+  margin: 0 0 4px;
+}
+
+.modal__subtitle {
+  @include font($ff-ptmono, 400, 16px, 22px);
+  color: $color-default-white;
+  margin: 0 0 40px;
+}
+
+.modal__form-wrap form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form-wrap input:not([type="checkbox"]) {
+  @include font($ff-ptmono, 400, 16px, 22px);
+  color: $color-default-white;
+  background-color: $color-btn-black-pearl-opacity;
+  border: none;
+  border-radius: 3px;
+  height: 50px;
+  padding: 0 15px;
+  margin: 0 0 20px;
+
+  &::placeholder {
+    @include font($ff-ptmono, 400, 16px, 22px);
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-whisper;
+  }
+}
+
+.modal__form-wrap textarea {
+  @include font($ff-ptmono, 400, 16px, 22px);
+  color: $color-default-white;
+  background-color: $color-btn-black-pearl-opacity;
+  border: none;
+  border-radius: 3px;
+  height: 155px;
+  grid-column: 1/-1;
+  padding: 23px 16px;
+  margin-bottom: 25px;
+
+  &::placeholder {
+    @include font($ff-ptmono, 400, 16px, 22px);
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-whisper;
+  }
+}
+
+.modal__form-wrap button {
+  @include font($ff-roboto, 700, 16px, 19px);
+  color: $color-default-white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: $color-btn-black-pearl;
+  border-radius: 3px;
+  width: 100%;
+  height: min-content;
+  padding: 14px 10px 12px;
+  border: none;
+  margin-bottom: 20px;
+
+  &:disabled {
+    background-color: $color-contacts-black-pearl;
+  }
+}
+
+.modal__form-wrap span {
+  @include font($ff-ptmono, 400, 14px, 16px);
+  color: $color-default-white;
+  opacity: 0.8;
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+    border-radius: 2px;
+    position: absolute;
+    left: -25px;
+    top: 1px;
+  }
+
+  @include vp-1023 {
+    padding: 8px 0 0;
+
+    &::before {
+      left: -25px;
+      top: 35%;
+    }
+  }
+
+  @include vp-767 {
+    padding: 5px 0 0;
+
+    &::before {
+      left: -26px;
+      top: 30%;
+    }
+  }
+}
+
+.modal__form-wrap input[type="checkbox"]:checked + span::before {
+  background-image: url("../img/svg/checkbox-tick.svg");
+  background-size: 9px 6px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.modal__form-wrap label {
+  padding-left: 34px;
+}
+
+.modal__form-wrap input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.modal.is-active {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }

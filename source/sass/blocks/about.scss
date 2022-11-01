@@ -1,0 +1,129 @@
+.about {
+  background-color: $color-bg-alice-blue;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  min-height: 480px;
+
+  @include vp-1023 {
+    padding-top: 36px;
+    min-height: 500px;
+  }
+
+  @include vp-767 {
+    padding-top: 9px;
+    min-height: 394px;
+  }
+}
+
+.about__wrap {
+  max-width: 1302px;
+  padding-left: 292px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 150px;
+    height: 320px;
+    background-image: url("../img/2022.png");
+    background-repeat: no-repeat;
+    background-size: 150px 320px;
+    position: absolute;
+    left: 41px;
+
+    @include retina {
+      background-image: url("../img/2022@2x.png");
+    }
+  }
+
+  @include vp-1023 {
+    padding-left: 225px;
+
+    &::before {
+      left: 45px;
+      top: 4px;
+    }
+  }
+
+  @include vp-767 {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.about__wrap h2 {
+  @include font($ff-roboto, 400, 36px, 51px);
+  color: $color-black-pearl;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about__wrap p {
+  @include font($ff-ptmono, 400, 16px, 1.36);
+  color: $color-black-pearl;
+  margin: 12px 0 20px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 12px 0 18px;
+  }
+}
+
+.about__wrap span {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.about__wrap span.is-open {
+  @include vp-767 {
+    display: inline;
+  }
+}
+
+.about__wrap button {
+  @include font($ff-roboto, 700, 14px, 16px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-deep-sky-blue;
+  background-color: $color-bg-alice-blue;
+  width: 180px;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
+  margin-top: 41px;
+  padding: 13px 5px 14px;
+  user-select: none;
+  cursor: pointer;
+  display: none;
+
+  @include vp-1023 {
+    margin-top: -3px;
+  }
+
+  @include vp-767 {
+    width: 160px;
+    padding: 7px 5px 9px;
+    margin-top: -6px;
+  }
+
+  @include hover-focus {
+    background-color: $color-deep-sky-blue;
+    color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-deep-sky-blue;
+    color: $color-default-white;
+    opacity: 0.7;
+  }
+}
+
+.about__wrap button.is-active {
+  display: block;
+}
