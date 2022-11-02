@@ -53,7 +53,7 @@
 }
 
 .about__wrap h2 {
-  @include font($ff-roboto, 400, 36px, 51px);
+  @include font(400, 36px, 51px);
   color: $color-black-pearl;
   margin: 0;
 
@@ -64,7 +64,8 @@
 }
 
 .about__wrap p {
-  @include font($ff-ptmono, 400, 16px, 1.36);
+  @include font(400, 16px, 1.36);
+  font-family: $ff-ptmono;
   color: $color-black-pearl;
   margin: 12px 0 20px;
 
@@ -88,7 +89,7 @@
 }
 
 .about__wrap button {
-  @include font($ff-roboto, 700, 14px, 16px);
+  @include font(700, 14px, 16px);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-deep-sky-blue;

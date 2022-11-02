@@ -83,7 +83,7 @@
 }
 
 .advantages__description-title {
-  @include font($ff-roboto, 400, 24px, 34px);
+  @include font(400, 24px, 34px);
   color: $color-deep-sky-blue;
   margin: 15px 0 0;
 
@@ -111,7 +111,8 @@
 }
 
 .advantages__description {
-  @include font($ff-ptmono, 400, 16px, 1.35);
+  @include font(400, 16px, 1.35);
+  font-family: $ff-ptmono;
   color: $color-black-pearl;
   margin: 14px 0 0;
 

@@ -52,7 +52,8 @@
   position: relative;
 
   &--contact {
-    @include font($ff-ptmono, 400, 16px, 18px);
+    font-family: $ff-ptmono;
+    @include font(400, 16px, 18px);
     color: $color-alice-blue;
     padding: 5px 5px 5px 32px;
 
@@ -80,7 +81,7 @@
   }
 
   &--button-call {
-    @include font($ff-roboto, 700, 14px, 16px);
+    @include font(700, 14px, 16px);
     color: $color-alice-blue;
     letter-spacing: 0.05em;
     text-transform: uppercase;

@@ -19,6 +19,7 @@
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: $ff-ptmono;
 
   &::-webkit-scrollbar {
     display: none;
@@ -94,13 +95,14 @@
 }
 
 .modal__title {
-  @include font($ff-roboto, 400, 30px, 42px);
+  @include font(400, 30px, 42px);
+  font-family: $ff-roboto;
   color: $color-default-white;
   margin: 0 0 4px;
 }
 
 .modal__subtitle {
-  @include font($ff-ptmono, 400, 16px, 22px);
+  @include font(400, 16px, 22px);
   color: $color-default-white;
   margin: 0 0 40px;
 }
@@ -111,7 +113,7 @@
 }
 
 .modal__form-wrap input:not([type="checkbox"]) {
-  @include font($ff-ptmono, 400, 16px, 22px);
+  @include font(400, 16px, 22px);
   color: $color-default-white;
   background-color: $color-btn-black-pearl-opacity;
   border: none;
@@ -121,7 +123,7 @@
   margin: 0 0 20px;
 
   &::placeholder {
-    @include font($ff-ptmono, 400, 16px, 22px);
+    @include font(400, 16px, 22px);
     color: $color-default-white;
   }
 
@@ -131,7 +133,7 @@
 }
 
 .modal__form-wrap textarea {
-  @include font($ff-ptmono, 400, 16px, 22px);
+  @include font(400, 16px, 22px);
   color: $color-default-white;
   background-color: $color-btn-black-pearl-opacity;
   border: none;
@@ -142,7 +144,7 @@
   margin-bottom: 25px;
 
   &::placeholder {
-    @include font($ff-ptmono, 400, 16px, 22px);
+    @include font(400, 16px, 22px);
     color: $color-default-white;
   }
 
@@ -152,7 +154,8 @@
 }
 
 .modal__form-wrap button {
-  @include font($ff-roboto, 700, 16px, 19px);
+  @include font(700, 16px, 19px);
+  font-family: $ff-roboto;
   color: $color-default-white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -170,7 +173,7 @@
 }
 
 .modal__form-wrap span {
-  @include font($ff-ptmono, 400, 14px, 16px);
+  @include font(400, 14px, 16px);
   color: $color-default-white;
   opacity: 0.8;
   display: block;

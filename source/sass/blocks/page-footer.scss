@@ -209,7 +209,7 @@
 }
 
 .page-footer__nav-title {
-  @include font($ff-roboto, 400, 15px, 16px);
+  @include font(400, 15px, 16px);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-default-white;
@@ -227,17 +227,23 @@
 }
 
 .page-footer__nav-link {
-  @include font($ff-ptmono, 400, 16px, 22px);
+  @include font(400, 16px, 22px);
+  font-family: $ff-ptmono;
   color: $color-transparent;
 
   @include vp-767 {
     font-size: 14px;
     line-height: 25px;
   }
+
+  @include hover-focus {
+    color: $color-deep-sky-blue;
+  }
 }
 
 .page-footer__address {
-  @include font($ff-ptmono, 400, 16px, 22px);
+  @include font(400, 16px, 22px);
+  font-family: $ff-ptmono;
   color: $color-transparent;
   margin: 0;
 

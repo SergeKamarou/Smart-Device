@@ -12,11 +12,11 @@ body {
 }
 
 html {
+  font-family: $ff-roboto;
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
   line-height: 1.35;
-  font-family: $ff-ptmono;
   color: $color-black-pearl;
   scroll-behavior: smooth;
 
