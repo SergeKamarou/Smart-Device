@@ -930,8 +930,15 @@ button,
   background-position: 50%;
 }
 
+.modal__form-wrap input[type=checkbox]:focus-visible ~ span::before {
+  border-color: #000000;
+}
+
 .modal__form-wrap label {
   padding-left: 34px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .modal__form-wrap input[type=checkbox] {
@@ -1495,6 +1502,10 @@ button,
   position: relative;
 }
 
+.products__link.focus-visible:focus {
+  background-color: transparent;
+}
+
 .products__link-title {
   font-weight: 400;
   font-size: 20px;
@@ -1794,6 +1805,9 @@ button,
 
 .feedback__form-wrap label {
   padding-left: 37px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .feedback__form-wrap input[type=checkbox] {
@@ -2556,6 +2570,10 @@ button,
   .about__wrap button:hover:not(.focus-visible) {
     background-color: #00b2ff;
     color: #ffffff;
+  }
+
+  .products__link:hover:not(.focus-visible) {
+    background-color: transparent;
   }
 
   .feedback__form-wrap button:hover:not(.focus-visible) {

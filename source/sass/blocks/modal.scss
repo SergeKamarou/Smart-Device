@@ -217,8 +217,13 @@
   background-position: 50%;
 }
 
+.modal__form-wrap input[type="checkbox"]:focus-visible ~ span::before {
+  border-color: $color-default-black;
+}
+
 .modal__form-wrap label {
   padding-left: 34px;
+  order: 1;
 }
 
 .modal__form-wrap input[type="checkbox"] {

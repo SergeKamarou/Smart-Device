@@ -131,6 +131,10 @@
   padding: 47px 140px 20px 40px;
   position: relative;
 
+  @include hover-focus {
+    background-color: transparent;
+  }
+
   @include vp-1023 {
     padding: 39px 45px 20px;
   }
