@@ -25,7 +25,7 @@
             </a>
             <ul class="page-header__contacts-list">
               <li class="page-header__contacts-item">
-                <a class="page-header__contacts-link page-header__contacts-link--contact" href="mailto:info@sd.ru">
+                <a class="page-header__contacts-link page-header__contacts-link--contact" href="mailto:info@sd.ru" title="Наша электронная почта.">
                   <svg class="page-header__contacts-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="img/sprite_auto.svg#mail-icon"></use>
                   </svg>
@@ -33,22 +33,26 @@
                 </a>
               </li>
               <li class="page-header__contacts-item">
-                <a class="page-header__contacts-link page-header__contacts-link--contact" href="tel:+74950005252">
+                <a class="page-header__contacts-link page-header__contacts-link--contact" href="tel:+74950005252" title="Наш телефон.">
                   <svg class="page-header__contacts-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="img/sprite_auto.svg#phone-icon"></use>
                   </svg>
-                  <span class="page-header__contacts-text">+7 (495) 000 52 52</span>
+                  <span class="page-header__contacts-text">+7&nbsp;(495)&nbsp;000&nbsp;52&nbsp;52</span>
                 </a>
               </li>
             </ul>
-            <a class="page-header__contacts-link page-header__contacts-link--button-call" href="#" data-open-modal="feedback">заказать звонок</a>
+            <div class="page-header__buttons-wrap">
+              <a class="page-header__contacts-link page-header__contacts-link--button-call" href="#" data-open-modal="feedback">заказать звонок</a>
+            </div>
           </div>
         </div>
       </header>
       <main>
         <section class="promo">
           <picture>
-            <source type="image/webp" srcset="img/promo-bg.webp 1x, img/promo-bg@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/promo-mobile.webp 1x, img/promo-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/promo-bg.webp 1x, img/promo-bg@2x.webp 2x">
             <img src="img/promo-bg.jpg" srcset="img/promo-bg@2x.jpg 2x" width="1920" height="880"
               alt="Печатная плата.">
           </picture>
@@ -84,7 +88,7 @@
                   <use xlink:href="img/sprite_auto.svg#detective"></use>
                 </svg>
                 <h3 class="advantages__description-title advantages__description-title--confidential">Полная конфиденциальность</h3>
-                <p class="advantages__description advantages__description--confidential">По&nbsp;желанию клиента  &nbsp;мы&nbsp;обеспечиваем полную конфиденциальность.</p>
+                <p class="advantages__description advantages__description--confidential">По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
               </li>
               <li class="advantages__item advantages__item--cost">
                 <svg class="advantages__icon" width="35" height="35" viewBox="0 0 35 35" fill="#00B2FF" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +117,9 @@
             <ul class="products__list">
               <li class="products__item products__item--production">
                 <picture>
-                  <source type="image/webp" srcset="img/product.webp 1x, img/product@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-mobile-1.webp 1x, img/product-mobile-1@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-tablet.webp 1x, img/product-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/product.webp 1x, img/product@2x.webp 2x">
                   <img src="img/product.jpg" srcset="img/product@2x.jpg 2x" width="1493" height="817"
                     alt="Печатная плата.">
                 </picture>
@@ -124,7 +130,9 @@
               </li>
               <li class="products__item products__item--mounting">
                 <picture>
-                  <source type="image/webp" srcset="img/product.webp 1x, img/product@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-mobile-2.webp 1x, img/product-mobile-2@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-tablet.webp 1x, img/product-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/product.webp 1x, img/product@2x.webp 2x">
                   <img src="img/product.jpg" srcset="img/product@2x.jpg 2x" width="1493" height="817"
                     alt="Печатная плата.">
                 </picture>
@@ -135,7 +143,9 @@
               </li>
               <li class="products__item products__item--accessories">
                 <picture>
-                  <source type="image/webp" srcset="img/product.webp 1x, img/product@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/product-mobile-3.webp 1x, img/product-mobile-3@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-tablet.webp 1x, img/product-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1024px)" srcset="img/product.webp 1x, img/product@2x.webp 2x">
                   <img src="img/product.jpg" srcset="img/product@2x.jpg 2x" width="1493" height="817"
                     alt="Печатная плата.">
                 </picture>
@@ -152,11 +162,15 @@
             <div class="feedback__form-wrap">
               <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
               <p class="feedback__subtitle">Мы проконсультируем Вас бесплатно</p>
-              <form action="https://echo.htmlacademy.ru/" method="post">
-                <label class="visually-hidden" for="name">Имя.</label>
-                <input id="name" name="name" type="text" minlength="1" placeholder="Имя" required>
-                <label class="visually-hidden" for="phone">Телефон.</label>
-                <input id="phone" name="phone" type="tel" placeholder="Телефон" data-input-tel required>
+              <form action="https://echo.htmlacademy.ru/" method="post" data-form-feedback>
+                <div class="feedback__field-wrap">
+                  <label class="visually-hidden" for="name">Имя.</label>
+                  <input id="name" name="name" type="text" minlength="1" placeholder="Имя" pattern="[a-zA-Zа-яА-ЯёЁ\s]{1,99}" required>
+                </div>
+                <div class="feedback__field-wrap">
+                  <label class="visually-hidden" for="phone">Телефон.</label>
+                  <input id="phone" name="phone" type="tel" placeholder="Телефон" minlength="16" data-input-tel required>
+                </div>
                 <label class="visually-hidden" for="question">Ваш вопрос.</label>
                 <textarea id="question" name="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
                 <label>
@@ -265,9 +279,9 @@
             <p class="modal__subtitle">Оставьте контакты, мы проконсультируем<br> вас бесплатно в удобное время</p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="name-modal">Имя.</label>
-              <input id="name-modal" name="name" type="text" minlength="1" placeholder="Имя" data-focus required>
+              <input id="name-modal" name="name" type="text" minlength="1" placeholder="Имя" pattern="[a-zA-Zа-яА-ЯёЁ\s]{1}" data-focus required>
               <label class="visually-hidden" for="phone-modal">Телефон.</label>
-              <input id="phone-modal" name="phone" type="tel" placeholder="Телефон" data-input-tel required>
+              <input id="phone-modal" name="phone" type="tel" minlength="16" placeholder="Телефон" data-input-tel required>
               <label class="visually-hidden" for="question-modal">Ваш вопрос.</label>
               <textarea id="question-modal" name="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
               <label>

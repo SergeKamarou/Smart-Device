@@ -124,7 +124,7 @@
 
   &::placeholder {
     @include font(400, 16px, 22px);
-    color: $color-default-white;
+    color: $color-transparent;
   }
 
   &:focus-visible {
@@ -145,7 +145,7 @@
 
   &::placeholder {
     @include font(400, 16px, 22px);
-    color: $color-default-white;
+    color: $color-transparent;
   }
 
   &:focus-visible {
@@ -237,6 +237,7 @@
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+  transform: translate(-17px, 10px);
 }
 
 .modal.is-active {

@@ -60,7 +60,7 @@
   img {
     position: absolute;
     height: 100%;
-    object-fit: none;
+    object-fit: cover;
   }
 
   &--production {
@@ -86,19 +86,22 @@
 
     &--production {
       img {
-        object-position: 29% 96%;
+        object-position: 75px -177px;
+        scale: 2.2;
       }
     }
 
     &--mounting {
       img {
-        object-position: 76% 55%;
+        object-position: -98px -70px;
+        scale: 2.2;
       }
     }
 
     &--accessories {
       img {
-        object-position: 18% 63%;
+        object-position: 118px -93px;
+        scale: 2.2;
       }
     }
   }
@@ -106,19 +109,22 @@
   @include vp-767 {
     &--production {
       img {
-        object-position: 31% 52%;
+        object-position: -43px 27px;
+        scale: 1.7;
       }
     }
 
     &--mounting {
       img {
-        object-position: 30% 95%;
+        object-position: -75px -54px;
+        scale: 1.7;
       }
     }
 
     &--accessories {
       img {
-        object-position: 72% 69%;
+        object-position: -100px -16px;
+        scale: 1.7;
       }
     }
   }

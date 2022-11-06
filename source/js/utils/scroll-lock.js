@@ -24,6 +24,7 @@ export class ScrollLock {
     this._scrollTop = document.body.dataset.scroll = document.body.dataset.scroll ? document.body.dataset.scroll : this._getBodyScrollTop();
     if (this._getScrollbarWidth()) {
       document.body.style.paddingRight = `${this._getScrollbarWidth()}px`;
+      document.querySelector('.page-header__wrap').style.width = `${window.innerWidth - this._getScrollbarWidth()}px`;
       this._fixedBlockElements.forEach((block) => {
         block.style.paddingRight = `${this._getScrollbarWidth()}px`;
       });
