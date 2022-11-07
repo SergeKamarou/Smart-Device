@@ -3,6 +3,7 @@
   margin-top: -120px;
   background: $black-pearl-to-bottom;
   position: relative;
+  overflow: hidden;
 
   img {
     width: 100%;
@@ -32,7 +33,7 @@
 }
 
 .promo__wrap {
-  width: 1024px;
+  width: 1006px;
   padding: 305px 28px 10px;
 
   @include vp-1023 {

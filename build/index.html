@@ -165,7 +165,7 @@
               <form action="https://echo.htmlacademy.ru/" method="post" data-form-feedback>
                 <div class="feedback__field-wrap">
                   <label class="visually-hidden" for="name">Имя.</label>
-                  <input id="name" name="name" type="text" minlength="1" placeholder="Имя" pattern="[a-zA-Zа-яА-ЯёЁ\s]{1,99}" required>
+                  <input id="name" name="name" type="text" minlength="1" placeholder="Имя" pattern="[a-zA-Zа-яА-ЯёЁ\s\-w]{1,99}" required>
                 </div>
                 <div class="feedback__field-wrap">
                   <label class="visually-hidden" for="phone">Телефон.</label>
@@ -279,7 +279,7 @@
             <p class="modal__subtitle">Оставьте контакты, мы проконсультируем<br> вас бесплатно в удобное время</p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="name-modal">Имя.</label>
-              <input id="name-modal" name="name" type="text" minlength="1" placeholder="Имя" pattern="[a-zA-Zа-яА-ЯёЁ\s]{1}" data-focus required>
+              <input id="name-modal" name="name" type="text" minlength="1" placeholder="Имя" pattern="[a-zA-Zа-яА-ЯёЁ\s\-w]{1}" data-focus required>
               <label class="visually-hidden" for="phone-modal">Телефон.</label>
               <input id="phone-modal" name="phone" type="tel" minlength="16" placeholder="Телефон" data-input-tel required>
               <label class="visually-hidden" for="question-modal">Ваш вопрос.</label>
