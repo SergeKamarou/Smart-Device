@@ -39,7 +39,7 @@ const initInputPhoneMask = () => {
           inputPhoneElement.setCustomValidity('Номер слишком короткий');
         } else {
           inputPhoneElement.setCustomValidity('');
-        };
+        }
       });
     });
   }
