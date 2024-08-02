@@ -69,6 +69,7 @@
 
 .promo__description {
   font-family: $ff-ptmono;
+
   @include font(400, 22px, 34px);
   color: $color-alice-blue;
   margin: 0 0 47px;

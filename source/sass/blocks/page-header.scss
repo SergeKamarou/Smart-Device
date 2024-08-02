@@ -64,6 +64,7 @@
 
   &--contact {
     font-family: $ff-ptmono;
+
     @include font(400, 16px, 18px);
     color: $color-alice-blue;
     padding: 5px 5px 5px 32px;

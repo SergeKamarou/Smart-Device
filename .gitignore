@@ -2,6 +2,7 @@
 .idea
 .vscode
 package-lock.json
+build
 *.ai
 *.log
 *.psd
